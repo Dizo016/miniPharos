@@ -1,4 +1,9 @@
 package com.goal.miniPharos.domain.user;
 
-public record UserRequest() {
-}
+import jakarta.validation.constraints.NotBlank;
+
+public record UserRequest(
+        @NotBlank String name,
+        @NotBlank String login,
+        @NotBlank String password
+) {}
